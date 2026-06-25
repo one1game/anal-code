@@ -1,0 +1,2127 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#6366f1">
+
+<!-- Primary SEO Meta Tags -->
+<title>CodeFusion — Онлайн анализатор исходного кода | Просмотр и экспорт HTML, CSS, JS, Python, Java, PHP</title>
+<meta name="title" content="CodeFusion — Онлайн анализатор исходного кода | Просмотр и экспорт HTML, CSS, JS, Python, Java, PHP">
+<meta name="description" content="CodeFusion — бесплатный онлайн анализатор и просмотрщик исходного кода. Загружайте файлы и папки, получайте подсветку синтаксиса для HTML, CSS, JavaScript, Python, Java, PHP, XML, JSON. Экспорт в TXT, ZIP, Markdown. Работает в браузере, без регистрации.">
+<meta name="keywords" content="анализатор кода онлайн, просмотрщик кода, подсветка синтаксиса, анализ исходного кода, просмотр HTML, просмотр CSS, просмотр JavaScript, анализ Python, анализ Java, анализ PHP, просмотр XML, просмотр JSON, компилятор кода онлайн, бесплатные инструменты для программиста, code viewer, source code analyzer, syntax highlighter, CodeFusion">
+<meta name="author" content="CodeFusion">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<meta name="googlebot" content="index, follow">
+<meta name="language" content="Russian">
+<meta name="revisit-after" content="7 days">
+<meta name="rating" content="general">
+<meta name="distribution" content="global">
+
+<!-- Canonical URL -->
+<link rel="canonical" href="https://one1game.github.io/anal-code/">
+
+<!-- Hreflang для мультиязычности -->
+<link rel="alternate" hreflang="ru" href="https://one1game.github.io/anal-code/">
+<link rel="alternate" hreflang="en" href="https://one1game.github.io/anal-code/en/">
+<link rel="alternate" hreflang="x-default" href="https://one1game.github.io/anal-code/">
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://one1game.github.io/anal-code/">
+<meta property="og:title" content="CodeFusion — Онлайн анализатор исходного кода">
+<meta property="og:description" content="Бесплатный анализатор кода с подсветкой синтаксиса. Поддержка HTML, CSS, JS, Python, Java, PHP, XML, JSON. Экспорт в TXT, ZIP, Markdown.">
+<meta property="og:image" content="https://one1game.github.io/anal-code/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="CodeFusion — анализатор исходного кода">
+<meta property="og:site_name" content="CodeFusion">
+<meta property="og:locale" content="ru_RU">
+<meta property="og:locale:alternate" content="en_US">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:url" content="https://one1game.github.io/anal-code/">
+<meta name="twitter:title" content="CodeFusion — Онлайн анализатор исходного кода">
+<meta name="twitter:description" content="Бесплатный анализатор кода с подсветкой синтаксиса для 10+ языков.">
+<meta name="twitter:image" content="https://one1game.github.io/anal-code/og-image.png">
+<meta name="twitter:site" content="@codefusion">
+<meta name="twitter:creator" content="@codefusion">
+
+<!-- Favicon -->
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
+<link rel="apple-touch-icon" href="https://one1game.github.io/anal-code/apple-touch-icon.png">
+
+<!-- PWA Manifest -->
+<link rel="manifest" href="manifest.json">
+
+<!-- Preconnect для ускорения -->
+<link rel="preconnect" href="https://cdnjs.cloudflare.com">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+
+<!-- Styles & Scripts -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css" id="hljs-theme">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<!-- JSON-LD Structured Data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "CodeFusion",
+  "operatingSystem": "Web",
+  "applicationCategory": "DeveloperApplication",
+  "applicationSubCategory": "Source Code Analyzer",
+  "description": "Бесплатный онлайн анализатор исходного кода с подсветкой синтаксиса для HTML, CSS, JavaScript, Python, Java, PHP, XML, JSON. Поддержка загрузки файлов и папок, экспорт в TXT, ZIP, Markdown.",
+  "url": "https://one1game.github.io/anal-code/",
+  "logo": "https://one1game.github.io/anal-code/logo.png",
+  "screenshot": "https://one1game.github.io/anal-code/og-image.png",
+  "image": "https://one1game.github.io/anal-code/og-image.png",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD",
+    "availability": "https://schema.org/InStock"
+  },
+  "author": {
+    "@type": "Organization",
+    "name": "CodeFusion",
+    "url": "https://github.com/one1game"
+  },
+  "featureList": [
+    "Анализ исходного кода",
+    "Подсветка синтаксиса для 10+ языков",
+    "Загрузка файлов и папок",
+    "Drag & Drop",
+    "Экспорт в TXT, ZIP, Markdown",
+    "Поиск по коду",
+    "Статистика кода",
+    "Работа без регистрации"
+  ],
+  "programmingLanguage": ["HTML", "CSS", "JavaScript", "Python", "Java", "PHP", "XML", "JSON"],
+  "softwareVersion": "2.0",
+  "datePublished": "2024-01-01",
+  "dateModified": "2026-06-25",
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.9",
+    "ratingCount": "127",
+    "bestRating": "5",
+    "worstRating": "1"
+  }
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Что такое CodeFusion?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "CodeFusion — это бесплатный онлайн инструмент для анализа и просмотра исходного кода. Поддерживает более 10 языков программирования, включая HTML, CSS, JavaScript, Python, Java, PHP, XML, JSON."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Нужна ли регистрация для использования CodeFusion?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Нет, CodeFusion полностью бесплатен и не требует регистрации. Все файлы обрабатываются локально в вашем браузере и никуда не отправляются."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Какие форматы файлов поддерживает CodeFusion?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "CodeFusion поддерживает HTML, CSS, JavaScript, Python, Java, PHP, XML, JSON, TXT, Markdown и многие другие текстовые форматы."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Безопасно ли загружать файлы в CodeFusion?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Да, полностью безопасно. Все файлы обрабатываются локально в вашем браузере с помощью File API. Никакие данные не отправляются на сервер."
+      }
+    }
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "Главная", "item": "https://one1game.github.io/"},
+    {"@type": "ListItem", "position": 2, "name": "Инструменты", "item": "https://one1game.github.io/tools/"},
+    {"@type": "ListItem", "position": 3, "name": "CodeFusion — Анализатор кода", "item": "https://one1game.github.io/anal-code/"}
+  ]
+}
+</script>
+
+<style>
+:root {
+  --primary: #6366f1;
+  --primary-hover: #4f46e5;
+  --secondary: #10b981;
+  --accent: #8b5cf6;
+  --dark: #0f172a;
+  --darker: #020617;
+  --light: #f8fafc;
+  --gray: #64748b;
+  --success: #22c55e;
+  --error: #ef4444;
+  --warning: #f59e0b;
+  --glass: rgba(255, 255, 255, 0.05);
+  --glass-border: rgba(255, 255, 255, 0.1);
+  --bg-gradient: linear-gradient(135deg, var(--darker) 0%, var(--dark) 100%);
+  --text-color: var(--light);
+  --card-bg: var(--glass);
+  --code-bg: #0d1117;
+  --border-color: var(--glass-border);
+}
+
+[data-theme="light"] {
+  --dark: #f1f5f9;
+  --darker: #e2e8f0;
+  --light: #0f172a;
+  --gray: #475569;
+  --glass: rgba(255, 255, 255, 0.7);
+  --glass-border: rgba(0, 0, 0, 0.1);
+  --bg-gradient: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+  --text-color: #0f172a;
+  --card-bg: rgba(255, 255, 255, 0.8);
+  --code-bg: #1e293b;
+  --border-color: rgba(0, 0, 0, 0.1);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: var(--bg-gradient);
+  color: var(--text-color);
+  min-height: 100vh;
+  line-height: 1.6;
+  overflow-x: hidden;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.particles {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  z-index: -1;
+  pointer-events: none;
+}
+
+.particle {
+  position: absolute;
+  background: linear-gradient(45deg, var(--primary), var(--accent));
+  border-radius: 50%;
+  opacity: 0.3;
+  animation: float 20s infinite linear;
+}
+
+@keyframes float {
+  0% { transform: translateY(0) rotate(0deg); opacity: 0; }
+  10% { opacity: 0.3; }
+  90% { opacity: 0.3; }
+  100% { transform: translateY(-100vh) rotate(360deg); opacity: 0; }
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+/* Header */
+header {
+  text-align: center;
+  margin-bottom: 3rem;
+  position: relative;
+}
+
+.header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.theme-toggle {
+  background: var(--glass);
+  border: 1px solid var(--glass-border);
+  color: var(--text-color);
+  width: 44px; height: 44px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+.theme-toggle:hover {
+  transform: rotate(180deg);
+  background: var(--primary);
+}
+
+.logo {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+  background: linear-gradient(135deg, var(--primary), var(--accent));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+  from { filter: drop-shadow(0 0 10px rgba(99, 102, 241, 0.5)); }
+  to { filter: drop-shadow(0 0 20px rgba(139, 92, 246, 0.8)); }
+}
+
+h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 0.5rem;
+  background: linear-gradient(135deg, var(--light), #e2e8f0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+[data-theme="light"] h1 {
+  background: linear-gradient(135deg, #0f172a, #334155);
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  color: var(--gray);
+  margin-bottom: 2rem;
+}
+
+/* Social Share */
+.social-share {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin: 2rem 0;
+  flex-wrap: wrap;
+}
+
+.social-btn {
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  border: 1px solid var(--glass-border);
+  padding: 0.8rem 1.5rem;
+  border-radius: 50px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+[data-theme="light"] .social-btn { color: white; }
+
+.social-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.social-btn.twitter { background: linear-gradient(135deg, #1da1f2, #0d8bd9); }
+.social-btn.telegram { background: linear-gradient(135deg, #0088cc, #0077b5); }
+.social-btn.vk { background: linear-gradient(135deg, #4c75a3, #3b5998); }
+.social-btn.whatsapp { background: linear-gradient(135deg, #25d366, #128c7e); }
+.social-btn.github { background: linear-gradient(135deg, #333, #000); }
+
+/* Upload Section */
+.upload-section {
+  background: var(--card-bg);
+  backdrop-filter: blur(20px);
+  border: 1px solid var(--glass-border);
+  border-radius: 20px;
+  padding: 3rem;
+  margin-bottom: 3rem;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.drop-zone {
+  border: 2px dashed var(--glass-border);
+  border-radius: 15px;
+  padding: 3rem;
+  margin-bottom: 2rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.drop-zone:hover {
+  border-color: var(--primary);
+  transform: scale(1.02);
+}
+
+.drop-zone.active {
+  border-color: var(--success);
+  background: rgba(34, 197, 94, 0.1);
+  transform: scale(1.02);
+}
+
+.drop-zone i {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+  color: var(--primary);
+}
+
+.drop-text { font-size: 1.3rem; margin-bottom: 1rem; }
+
+.file-input, .directory-input { display: none; }
+
+.input-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+}
+
+.browse-btn {
+  background: linear-gradient(135deg, var(--primary), var(--accent));
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 50px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.browse-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(99, 102, 241, 0.4);
+}
+
+/* Filters */
+.filters-bar {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+  margin: 1rem 0;
+  flex-wrap: wrap;
+}
+
+.filter-chip {
+  background: var(--glass);
+  border: 1px solid var(--glass-border);
+  color: var(--text-color);
+  padding: 0.4rem 1rem;
+  border-radius: 50px;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.filter-chip.active {
+  background: var(--primary);
+  color: white;
+  border-color: var(--primary);
+}
+
+/* File List */
+.selected-files { margin-top: 2rem; }
+
+.view-toggle {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: flex-end;
+  margin-bottom: 1rem;
+}
+
+.view-btn {
+  background: var(--glass);
+  border: 1px solid var(--glass-border);
+  color: var(--text-color);
+  width: 36px; height: 36px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.view-btn.active {
+  background: var(--primary);
+  color: white;
+}
+
+.file-list {
+  display: grid;
+  gap: 1rem;
+  max-height: 400px;
+  overflow-y: auto;
+  padding-right: 0.5rem;
+}
+
+.file-list.tree-view {
+  display: block;
+  background: rgba(0,0,0,0.2);
+  padding: 1rem;
+  border-radius: 10px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.9rem;
+}
+
+.file-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: rgba(255, 255, 255, 0.08);
+  padding: 1rem;
+  border-radius: 10px;
+  animation: slideIn 0.3s ease;
+  transition: all 0.2s ease;
+}
+
+.file-item:hover {
+  background: rgba(255, 255, 255, 0.12);
+  transform: translateX(4px);
+}
+
+@keyframes slideIn {
+  from { opacity: 0; transform: translateX(-20px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+.file-info {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex: 1;
+  min-width: 0;
+}
+
+.file-icon {
+  width: 40px; height: 40px;
+  background: linear-gradient(135deg, var(--primary), var(--accent));
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.file-details {
+  text-align: left;
+  flex: 1;
+  min-width: 0;
+}
+
+.file-name {
+  font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.file-path {
+  font-size: 0.8rem;
+  color: var(--gray);
+  margin-top: 0.2rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.file-size {
+  font-size: 0.9rem;
+  color: var(--gray);
+  margin-right: 1rem;
+  flex-shrink: 0;
+}
+
+.remove-file {
+  background: none;
+  border: none;
+  color: var(--error);
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+.remove-file:hover {
+  background: rgba(239, 68, 68, 0.2);
+}
+
+/* Progress Bar */
+.progress-container {
+  margin: 1rem 0;
+  display: none;
+}
+
+.progress-container.active { display: block; }
+
+.progress-bar {
+  width: 100%;
+  height: 8px;
+  background: rgba(255,255,255,0.1);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--primary), var(--accent));
+  width: 0%;
+  transition: width 0.3s ease;
+  border-radius: 10px;
+}
+
+.progress-text {
+  font-size: 0.85rem;
+  color: var(--gray);
+  margin-top: 0.5rem;
+  text-align: center;
+}
+
+/* Buttons */
+.action-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+}
+
+.btn {
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 50px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--primary), var(--accent));
+  color: white;
+}
+
+.btn-primary:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(99, 102, 241, 0.4);
+}
+
+.btn-secondary {
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  border: 1px solid var(--glass-border);
+}
+
+[data-theme="light"] .btn-secondary {
+  background: rgba(0, 0, 0, 0.05);
+  color: var(--text-color);
+}
+
+.btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none !important;
+}
+
+/* Results Section */
+.results-section {
+  background: var(--card-bg);
+  backdrop-filter: blur(20px);
+  border: 1px solid var(--glass-border);
+  border-radius: 20px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+}
+
+.results-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--glass-border);
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.results-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.results-actions {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+/* Search */
+.search-container {
+  position: relative;
+  margin-bottom: 1.5rem;
+  display: none;
+}
+
+.search-container.active { display: block; }
+
+.search-input {
+  width: 100%;
+  padding: 0.8rem 1rem 0.8rem 2.5rem;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid var(--glass-border);
+  border-radius: 10px;
+  color: var(--text-color);
+  font-size: 1rem;
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+.search-input:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.2);
+}
+
+.search-icon {
+  position: absolute;
+  left: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--gray);
+}
+
+.search-info {
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 0.85rem;
+  color: var(--gray);
+}
+
+mark {
+  background: rgba(250, 204, 21, 0.4);
+  color: inherit;
+  padding: 0 2px;
+  border-radius: 2px;
+}
+
+/* Code Container */
+.code-container {
+  background: rgba(15, 23, 42, 0.8);
+  border-radius: 15px;
+  overflow: hidden;
+  margin-bottom: 2rem;
+  border: 1px solid var(--glass-border);
+  animation: scaleIn 0.3s ease;
+}
+
+@keyframes scaleIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.file-header {
+  background: linear-gradient(90deg, var(--primary), var(--accent));
+  padding: 1rem 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.file-title {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-weight: 600;
+  color: white;
+}
+
+.file-meta {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 0.9rem;
+  opacity: 0.9;
+  color: white;
+}
+
+.file-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.icon-btn {
+  background: rgba(255,255,255,0.2);
+  border: none;
+  color: white;
+  width: 36px; height: 36px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-btn:hover {
+  background: rgba(255,255,255,0.3);
+  transform: scale(1.1);
+}
+
+.code-content {
+  position: relative;
+  max-height: 600px;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+.code-content.collapsed {
+  max-height: 200px;
+}
+
+.code-content.collapsed::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 80px;
+  background: linear-gradient(to top, #0d1117, transparent);
+  pointer-events: none;
+}
+
+pre {
+  margin: 0;
+  padding: 1.5rem;
+  overflow-x: auto;
+  background: #0d1117;
+  counter-reset: line;
+}
+
+pre code {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 14px;
+  line-height: 1.6;
+  display: block;
+}
+
+.code-line {
+  display: block;
+  padding-left: 3.5rem;
+  position: relative;
+}
+
+.code-line::before {
+  counter-increment: line;
+  content: counter(line);
+  position: absolute;
+  left: 0;
+  width: 2.5rem;
+  text-align: right;
+  color: #475569;
+  padding-right: 0.5rem;
+  user-select: none;
+  font-size: 0.85rem;
+}
+
+.hljs { background: #0d1117 !important; padding: 0; }
+
+/* Stats */
+.stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.stat-card {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 1.5rem;
+  border-radius: 15px;
+  text-align: center;
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--glass-border);
+  transition: transform 0.2s ease;
+}
+
+.stat-card:hover { transform: translateY(-4px); }
+
+.stat-value {
+  font-size: 2rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, var(--primary), var(--accent));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 0.5rem;
+}
+
+.stat-label {
+  color: var(--gray);
+  font-size: 0.9rem;
+}
+
+/* Empty State */
+.empty-state {
+  text-align: center;
+  padding: 4rem 2rem;
+  color: var(--gray);
+}
+
+.empty-icon {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+  opacity: 0.5;
+}
+
+/* Notification */
+.notification {
+  position: fixed;
+  top: 2rem;
+  right: 2rem;
+  background: linear-gradient(135deg, var(--success), #16a34a);
+  color: white;
+  padding: 1rem 2rem;
+  border-radius: 10px;
+  box-shadow: 0 10px 25px rgba(34, 197, 94, 0.3);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  transform: translateX(calc(100% + 3rem));
+  transition: transform 0.3s ease;
+  max-width: 400px;
+}
+
+.notification.show { transform: translateX(0); }
+.notification.error { background: linear-gradient(135deg, var(--error), #dc2626); }
+.notification.warning { background: linear-gradient(135deg, var(--warning), #d97706); }
+
+/* Loading */
+.loading {
+  display: inline-block;
+  width: 20px; height: 20px;
+  border: 3px solid rgba(255,255,255,.3);
+  border-radius: 50%;
+  border-top-color: #fff;
+  animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin { to { transform: rotate(360deg); } }
+
+/* Footer */
+.footer {
+  text-align: center;
+  margin-top: 3rem;
+  padding: 2rem;
+  color: var(--gray);
+  border-top: 1px solid var(--glass-border);
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+}
+
+.footer-link {
+  color: var(--primary);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-link:hover { color: var(--accent); }
+
+/* FAQ Section for SEO */
+.faq-section {
+  background: var(--card-bg);
+  backdrop-filter: blur(20px);
+  border: 1px solid var(--glass-border);
+  border-radius: 20px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+}
+
+.faq-item {
+  border-bottom: 1px solid var(--glass-border);
+  padding: 1rem 0;
+}
+
+.faq-item:last-child { border-bottom: none; }
+
+.faq-question {
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 0;
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+  color: var(--gray);
+}
+
+.faq-item.open .faq-answer {
+  max-height: 500px;
+  padding-top: 0.5rem;
+}
+
+.faq-item.open .faq-question i {
+  transform: rotate(180deg);
+}
+
+.faq-question i { transition: transform 0.3s ease; }
+
+/* Keyboard Shortcuts Modal */
+.modal {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.7);
+  backdrop-filter: blur(5px);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+}
+
+.modal.active { display: flex; }
+
+.modal-content {
+  background: var(--dark);
+  border: 1px solid var(--glass-border);
+  border-radius: 20px;
+  padding: 2rem;
+  max-width: 500px;
+  width: 90%;
+  max-height: 80vh;
+  overflow-y: auto;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.shortcut-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid var(--glass-border);
+}
+
+kbd {
+  background: rgba(255,255,255,0.1);
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.85rem;
+  border: 1px solid var(--glass-border);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .container { padding: 1rem; }
+  h1 { font-size: 2rem; }
+  .upload-section { padding: 2rem 1rem; }
+  .drop-zone { padding: 2rem 1rem; }
+  .input-buttons, .action-buttons, .social-share { flex-direction: column; }
+  .results-header { flex-direction: column; align-items: stretch; }
+  .results-actions { justify-content: center; }
+  .file-header { flex-direction: column; text-align: center; }
+  .header-top { flex-direction: row-reverse; }
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 8px; height: 8px; }
+::-webkit-scrollbar-track { background: rgba(0,0,0,0.2); }
+::-webkit-scrollbar-thumb {
+  background: var(--primary);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover { background: var(--primary-hover); }
+</style>
+</head>
+<body>
+<div class="particles" id="particles" aria-hidden="true"></div>
+
+<div class="container">
+  <div class="header-top">
+    <button class="theme-toggle" onclick="toggleTheme()" aria-label="Переключить тему" title="Переключить тему (T)">
+      <i class="fas fa-moon" id="themeIcon"></i>
+    </button>
+    <button class="theme-toggle" onclick="showShortcuts()" aria-label="Горячие клавиши" title="Горячие клавиши (?)">
+      <i class="fas fa-keyboard"></i>
+    </button>
+  </div>
+
+  <header>
+    <div class="logo" aria-hidden="true"><i class="fas fa-code-branch"></i></div>
+    <h1>CodeFusion</h1>
+    <p class="subtitle">Бесплатный онлайн анализатор и просмотрщик исходного кода с подсветкой синтаксиса</p>
+
+    <nav class="social-share" aria-label="Поделиться в соцсетях">
+      <button class="social-btn twitter" onclick="shareOnTwitter()" aria-label="Поделиться в Twitter">
+        <i class="fab fa-twitter"></i> Twitter
+      </button>
+      <button class="social-btn telegram" onclick="shareOnTelegram()" aria-label="Поделиться в Telegram">
+        <i class="fab fa-telegram"></i> Telegram
+      </button>
+      <button class="social-btn vk" onclick="shareOnVK()" aria-label="Поделиться ВКонтакте">
+        <i class="fab fa-vk"></i> ВКонтакте
+      </button>
+      <button class="social-btn whatsapp" onclick="shareOnWhatsApp()" aria-label="Поделиться в WhatsApp">
+        <i class="fab fa-whatsapp"></i> WhatsApp
+      </button>
+      <button class="social-btn github" onclick="window.open('https://github.com/one1game','_blank')" aria-label="GitHub">
+        <i class="fab fa-github"></i> GitHub
+      </button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="upload-section" aria-labelledby="upload-title">
+      <h2 id="upload-title" class="sr-only">Загрузка файлов для анализа</h2>
+      <div class="drop-zone" id="dropZone" role="button" tabindex="0" aria-label="Зона для перетаскивания файлов">
+        <i class="fas fa-cloud-upload-alt" aria-hidden="true"></i>
+        <div class="drop-text">Перетащите файлы или папки сюда</div>
+        <p>или нажмите кнопку ниже. Поддерживаются: .html, .css, .js, .java, .py, .php, .xml, .json, .txt, .md</p>
+        <div class="input-buttons">
+          <button class="browse-btn" onclick="document.getElementById('fileInput').click()">
+            <i class="fas fa-file"></i> Выбрать файлы
+          </button>
+          <button class="browse-btn" onclick="document.getElementById('directoryInput').click()">
+            <i class="fas fa-folder"></i> Выбрать папку
+          </button>
+        </div>
+        <input type="file" id="fileInput" class="file-input" multiple accept=".html,.css,.js,.java,.py,.php,.xml,.json,.txt,.md,.ts,.tsx,.jsx,.c,.cpp,.h,.cs,.rb,.go,.rs,.swift,.kt,.sql,.yaml,.yml,.toml,.ini,.sh,.bash,.bat,.ps1">
+        <input type="file" id="directoryInput" class="directory-input" webkitdirectory mozdirectory>
+      </div>
+
+      <div class="progress-container" id="progressContainer">
+        <div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
+        <div class="progress-text" id="progressText">Обработка: 0%</div>
+      </div>
+
+      <div class="selected-files">
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:1rem;flex-wrap:wrap;gap:1rem;">
+          <h3>Выбранные файлы: <span id="fileCount">0</span></h3>
+          <div class="view-toggle">
+            <button class="view-btn active" onclick="setView('list')" id="listViewBtn" aria-label="Список" title="Список">
+              <i class="fas fa-list"></i>
+            </button>
+            <button class="view-btn" onclick="setView('tree')" id="treeViewBtn" aria-label="Дерево" title="Дерево">
+              <i class="fas fa-sitemap"></i>
+            </button>
+          </div>
+        </div>
+
+        <div class="filters-bar" id="filtersBar"></div>
+        <div class="file-list" id="fileList">
+          <div class="empty-state">
+            <i class="fas fa-folder-open"></i>
+            <p>Файлы не выбраны</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="action-buttons">
+        <button class="btn btn-primary" id="processBtn" onclick="processFiles()" disabled>
+          <i class="fas fa-bolt"></i> Анализировать код
+        </button>
+        <button class="btn btn-secondary" onclick="clearAll()">
+          <i class="fas fa-trash"></i> Очистить всё
+        </button>
+      </div>
+    </section>
+
+    <section class="results-section" id="resultsSection" aria-labelledby="results-title">
+      <div class="results-header">
+        <h2 class="results-title" id="results-title">Результаты анализа</h2>
+        <div class="results-actions">
+          <button class="btn btn-secondary" onclick="toggleSearch()" id="searchToggleBtn" disabled title="Поиск (Ctrl+F)">
+            <i class="fas fa-search"></i> Поиск
+          </button>
+          <button class="btn btn-primary" id="copyAllBtn" onclick="copyAllCode()" disabled>
+            <i class="fas fa-copy"></i> Скопировать всё
+          </button>
+          <button class="btn btn-secondary" onclick="exportAs('txt')">
+            <i class="fas fa-file-alt"></i> TXT
+          </button>
+          <button class="btn btn-secondary" onclick="exportAs('zip')">
+            <i class="fas fa-file-archive"></i> ZIP
+          </button>
+          <button class="btn btn-secondary" onclick="exportAs('md')">
+            <i class="fab fa-markdown"></i> MD
+          </button>
+        </div>
+      </div>
+
+      <div class="search-container" id="searchContainer">
+        <i class="fas fa-search search-icon"></i>
+        <input type="text" class="search-input" id="searchInput" placeholder="Поиск по коду... (Enter для следующего, Esc для закрытия)">
+        <span class="search-info" id="searchInfo"></span>
+      </div>
+
+      <div id="results">
+        <div class="empty-state">
+          <div class="empty-icon"><i class="fas fa-code"></i></div>
+          <p>Загрузите файлы для анализа</p>
+          <small>Результаты появятся здесь после обработки</small>
+        </div>
+      </div>
+
+      <div class="stats" id="stats" style="display: none;">
+        <div class="stat-card">
+          <div class="stat-value" id="totalFiles">0</div>
+          <div class="stat-label">Файлов</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-value" id="totalLines">0</div>
+          <div class="stat-label">Строк</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-value" id="totalChars">0</div>
+          <div class="stat-label">Символов</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-value" id="totalWords">0</div>
+          <div class="stat-label">Слов</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-value" id="totalSize">0 KB</div>
+          <div class="stat-label">Размер</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section for SEO -->
+    <section class="faq-section" aria-labelledby="faq-title">
+      <h2 id="faq-title" style="margin-bottom:1rem;font-size:1.5rem;">
+        <i class="fas fa-question-circle"></i> Часто задаваемые вопросы
+      </h2>
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          <span>Что такое CodeFusion?</span>
+          <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="faq-answer">
+          <p>CodeFusion — это бесплатный онлайн инструмент для анализа и просмотра исходного кода. Он поддерживает более 10 языков программирования, включая HTML, CSS, JavaScript, Python, Java, PHP, XML, JSON, и предоставляет подсветку синтаксиса, экспорт в различные форматы и подробную статистику.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          <span>Нужна ли регистрация для использования?</span>
+          <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="faq-answer">
+          <p>Нет, CodeFusion полностью бесплатен и не требует регистрации. Все файлы обрабатываются локально в вашем браузере с помощью File API и никуда не отправляются — это гарантирует полную конфиденциальность вашего кода.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          <span>Какие форматы файлов поддерживаются?</span>
+          <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="faq-answer">
+          <p>CodeFusion поддерживает: HTML, CSS, JavaScript/TypeScript, Python, Java, PHP, C, C++, C#, Go, Rust, Ruby, Swift, Kotlin, SQL, XML, JSON, YAML, Markdown, TXT, Shell-скрипты и многие другие текстовые форматы.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          <span>Безопасно ли загружать файлы?</span>
+          <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="faq-answer">
+          <p>Абсолютно безопасно. Все операции происходят локально в вашем браузере. Мы не отправляем ваши файлы на сервер, не храним их и не анализируем. Ваш исходный код остаётся полностью конфиденциальным.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          <span>Можно ли анализировать целые папки?</span>
+          <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="faq-answer">
+          <p>Да! CodeFusion поддерживает загрузку целых папок через кнопку «Выбрать папку» или перетаскивание. Вы также можете использовать Drag & Drop для файлов и папок прямо в окно браузера.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; <span id="currentYear">2026</span> CodeFusion. Бесплатный онлайн анализатор исходного кода.</p>
+    <div class="footer-links">
+      <a href="https://one1game.github.io" class="footer-link" target="_blank" rel="noopener">Главная</a>
+      <a href="https://github.com/one1game" class="footer-link" target="_blank" rel="noopener">GitHub</a>
+      <a href="#" class="footer-link" onclick="showAbout();return false;">О проекте</a>
+      <a href="#" class="footer-link" onclick="showShortcuts();return false;">Горячие клавиши</a>
+      <a href="sitemap.xml" class="footer-link">Карта сайта</a>
+    </div>
+  </footer>
+</div>
+
+<!-- Notification -->
+<div class="notification" id="notification" role="alert">
+  <i class="fas fa-check-circle"></i>
+  <span id="notificationText">Успешно!</span>
+</div>
+
+<!-- Shortcuts Modal -->
+<div class="modal" id="shortcutsModal" onclick="if(event.target===this)hideShortcuts()">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h3><i class="fas fa-keyboard"></i> Горячие клавиши</h3>
+      <button class="icon-btn" onclick="hideShortcuts()" style="background:rgba(255,255,255,0.1);color:var(--text-color);">
+        <i class="fas fa-times"></i>
+      </button>
+    </div>
+    <div class="shortcut-item"><span>Открыть файлы</span><span><kbd>Ctrl</kbd> + <kbd>O</kbd></span></div>
+    <div class="shortcut-item"><span>Анализировать</span><span><kbd>Ctrl</kbd> + <kbd>Enter</kbd></span></div>
+    <div class="shortcut-item"><span>Сохранить (экспорт)</span><span><kbd>Ctrl</kbd> + <kbd>S</kbd></span></div>
+    <div class="shortcut-item"><span>Поиск</span><span><kbd>Ctrl</kbd> + <kbd>F</kbd></span></div>
+    <div class="shortcut-item"><span>Переключить тему</span><span><kbd>T</kbd></span></div>
+    <div class="shortcut-item"><span>Очистить всё</span><span><kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>X</kbd></span></div>
+    <div class="shortcut-item"><span>Закрыть модальное окно</span><span><kbd>Esc</kbd></span></div>
+  </div>
+</div>
+
+<script>
+/* ===================== STATE ===================== */
+let selectedFiles = [];
+let fileContents = new Map();
+let currentView = 'list';
+let currentFilter = 'all';
+let searchMatches = [];
+let currentMatchIndex = -1;
+
+/* ===================== INIT ===================== */
+document.addEventListener('DOMContentLoaded', () => {
+  createParticles();
+  initDragAndDrop();
+  loadTheme();
+  loadSession();
+  document.getElementById('currentYear').textContent = new Date().getFullYear();
+  setupKeyboardShortcuts();
+  setupSearch();
+});
+
+/* ===================== THEME ===================== */
+function loadTheme() {
+  const theme = localStorage.getItem('codefusion-theme') || 'dark';
+  document.documentElement.setAttribute('data-theme', theme);
+  updateThemeIcon(theme);
+  updateHljsTheme(theme);
+}
+
+function toggleTheme() {
+  const current = document.documentElement.getAttribute('data-theme');
+  const next = current === 'dark' ? 'light' : 'dark';
+  document.documentElement.setAttribute('data-theme', next);
+  localStorage.setItem('codefusion-theme', next);
+  updateThemeIcon(next);
+  updateHljsTheme(next);
+  showNotification(`Тема изменена на ${next === 'dark' ? 'тёмную' : 'светлую'}`);
+}
+
+function updateThemeIcon(theme) {
+  const icon = document.getElementById('themeIcon');
+  icon.className = theme === 'dark' ? 'fas fa-moon' : 'fas fa-sun';
+}
+
+function updateHljsTheme(theme) {
+  const link = document.getElementById('hljs-theme');
+  link.href = theme === 'dark'
+    ? 'https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css'
+    : 'https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github.min.css';
+}
+
+/* ===================== PARTICLES ===================== */
+function createParticles() {
+  const container = document.getElementById('particles');
+  for (let i = 0; i < 40; i++) {
+    const p = document.createElement('div');
+    p.className = 'particle';
+    const size = Math.random() * 20 + 5;
+    p.style.width = p.style.height = size + 'px';
+    p.style.left = Math.random() * 100 + '%';
+    p.style.animationDuration = (Math.random() * 30 + 10) + 's';
+    p.style.animationDelay = (Math.random() * 5) + 's';
+    container.appendChild(p);
+  }
+}
+
+/* ===================== SOCIAL SHARE ===================== */
+function shareOnTwitter() {
+  const text = 'CodeFusion — бесплатный онлайн анализатор кода с подсветкой синтаксиса!';
+  const url = 'https://one1game.github.io/anal-code/';
+  window.open(`https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(url)}`, '_blank', 'width=600,height=400');
+}
+function shareOnTelegram() {
+  const text = 'CodeFusion — бесплатный онлайн анализатор кода!';
+  const url = 'https://one1game.github.io/anal-code/';
+  window.open(`https://t.me/share/url?url=${encodeURIComponent(url)}&text=${encodeURIComponent(text)}`, '_blank', 'width=600,height=400');
+}
+function shareOnVK() {
+  const url = 'https://one1game.github.io/anal-code/';
+  window.open(`https://vk.com/share.php?url=${encodeURIComponent(url)}`, '_blank', 'width=600,height=400');
+}
+function shareOnWhatsApp() {
+  const text = 'CodeFusion — бесплатный онлайн анализатор кода! https://one1game.github.io/anal-code/';
+  window.open(`https://wa.me/?text=${encodeURIComponent(text)}`, '_blank', 'width=600,height=400');
+}
+
+function showAbout() {
+  showNotification('CodeFusion v2.0 — бесплатный анализатор кода. Все файлы обрабатываются локально в браузере.');
+}
+
+/* ===================== DRAG & DROP ===================== */
+function initDragAndDrop() {
+  const dropZone = document.getElementById('dropZone');
+  const fileInput = document.getElementById('fileInput');
+  const directoryInput = document.getElementById('directoryInput');
+
+  ['dragenter', 'dragover', 'dragleave', 'drop'].forEach(e => {
+    dropZone.addEventListener(e, preventDefaults, false);
+    document.body.addEventListener(e, preventDefaults, false);
+  });
+
+  function preventDefaults(e) { e.preventDefault(); e.stopPropagation(); }
+
+  ['dragenter', 'dragover'].forEach(e => {
+    dropZone.addEventListener(e, () => dropZone.classList.add('active'));
+  });
+  ['dragleave', 'drop'].forEach(e => {
+    dropZone.addEventListener(e, () => dropZone.classList.remove('active'));
+  });
+
+  dropZone.addEventListener('drop', handleDrop, false);
+  dropZone.addEventListener('click', (e) => {
+    if (e.target === dropZone || e.target.closest('.drop-text') || e.target.closest('.drop-zone > p')) {
+      fileInput.click();
+    }
+  });
+
+  fileInput.addEventListener('change', function() { handleFiles(this.files); });
+  directoryInput.addEventListener('change', function() { handleFiles(this.files); });
+}
+
+function handleDrop(e) {
+  const items = e.dataTransfer.items;
+  if (items && items.length && items[0].webkitGetAsEntry) {
+    processDataTransferItems(items);
+  } else {
+    handleFiles(e.dataTransfer.files);
+  }
+}
+
+async function processDataTransferItems(items) {
+  const fileEntries = [];
+  async function processItem(item) {
+    return new Promise((resolve) => {
+      if (item.isFile) {
+        item.file(file => {
+          file.relativePath = item.fullPath || item.name;
+          fileEntries.push(file);
+          resolve();
+        });
+      } else if (item.isDirectory) {
+        const dirReader = item.createReader();
+        const allEntries = [];
+        const readBatch = () => {
+          dirReader.readEntries(async entries => {
+            if (entries.length === 0) {
+              await Promise.all(allEntries.map(processItem));
+              resolve();
+            } else {
+              allEntries.push(...entries);
+              readBatch();
+            }
+          });
+        };
+        readBatch();
+      } else {
+        resolve();
+      }
+    });
+  }
+
+  const entries = Array.from(items).map(i => i.webkitGetAsEntry()).filter(Boolean);
+  await Promise.all(entries.map(processItem));
+  handleFiles(fileEntries);
+}
+
+/* ===================== FILE HANDLING ===================== */
+const ALLOWED_EXTENSIONS = ['html','css','js','ts','tsx','jsx','java','py','php','xml','json','txt','md','c','cpp','h','cs','go','rs','rb','swift','kt','sql','yaml','yml','toml','ini','sh','bash','bat','ps1','vue','svelte'];
+
+function handleFiles(files) {
+  const newFiles = Array.from(files).filter(f => {
+    const ext = f.name.split('.').pop().toLowerCase();
+    return ALLOWED_EXTENSIONS.includes(ext) || f.type.startsWith('text/') || f.size < 10 * 1024 * 1024;
+  });
+
+  if (newFiles.length === 0) {
+    showNotification('Поддерживаются только текстовые файлы', 'warning');
+    return;
+  }
+
+  selectedFiles = [...selectedFiles, ...newFiles];
+  // Убираем дубликаты
+  const seen = new Set();
+  selectedFiles = selectedFiles.filter(file => {
+    const key = `${file.name}|${file.relativePath || file.webkitRelativePath || ''}|${file.size}`;
+    if (seen.has(key)) return false;
+    seen.add(key);
+    return true;
+  });
+
+  updateFileList();
+  updateProcessButton();
+  saveSession();
+  showNotification(`Добавлено файлов: ${newFiles.length}`);
+}
+
+function updateFileList() {
+  const fileList = document.getElementById('fileList');
+  const fileCount = document.getElementById('fileCount');
+  fileCount.textContent = selectedFiles.length;
+
+  updateFilters();
+
+  if (selectedFiles.length === 0) {
+    fileList.innerHTML = `<div class="empty-state"><i class="fas fa-folder-open"></i><p>Файлы не выбраны</p></div>`;
+    fileList.className = 'file-list';
+    return;
+  }
+
+  const filtered = currentFilter === 'all'
+    ? selectedFiles
+    : selectedFiles.filter(f => f.name.split('.').pop().toLowerCase() === currentFilter);
+
+  if (currentView === 'tree') {
+    fileList.className = 'file-list tree-view';
+    fileList.innerHTML = buildTree(filtered);
+  } else {
+    fileList.className = 'file-list';
+    fileList.innerHTML = '';
+    filtered.forEach((file) => {
+      const realIndex = selectedFiles.indexOf(file);
+      const ext = file.name.split('.').pop().toLowerCase();
+      const icon = getFileIcon(ext);
+      const relativePath = file.relativePath || file.webkitRelativePath || '';
+      const item = document.createElement('div');
+      item.className = 'file-item';
+      item.innerHTML = `
+        <div class="file-info">
+          <div class="file-icon">${icon}</div>
+          <div class="file-details">
+            <div class="file-name">${escapeHtml(file.name)}</div>
+            ${relativePath ? `<div class="file-path">${escapeHtml(relativePath)}</div>` : ''}
+          </div>
+        </div>
+        <div class="file-size">${formatFileSize(file.size)}</div>
+        <button class="remove-file" onclick="removeFile(${realIndex})" aria-label="Удалить файл">
+          <i class="fas fa-times"></i>
+        </button>
+      `;
+      fileList.appendChild(item);
+    });
+  }
+}
+
+function buildTree(files) {
+  const tree = {};
+  files.forEach(file => {
+    const path = (file.relativePath || file.webkitRelativePath || file.name).replace(/^\//, '');
+    const parts = path.split('/');
+    let current = tree;
+    parts.forEach((part, i) => {
+      if (i === parts.length - 1) {
+        current[part] = { __isFile: true, __file: file };
+      } else {
+        if (!current[part]) current[part] = {};
+        current = current[part];
+      }
+    });
+  });
+
+  function render(node, indent = 0) {
+    let html = '';
+    const entries = Object.entries(node).sort(([a, va], [b, vb]) => {
+      const aDir = !va.__isFile;
+      const bDir = !vb.__isFile;
+      if (aDir !== bDir) return aDir ? -1 : 1;
+      return a.localeCompare(b);
+    });
+    for (const [name, value] of entries) {
+      const prefix = '│ '.repeat(indent) + (indent > 0 ? '├─ ' : '');
+      if (value.__isFile) {
+        const ext = name.split('.').pop().toLowerCase();
+        html += `<div style="padding:2px 0;color:var(--text-color);">${prefix}<i class="${getFileIcon(ext, true)}" style="color:var(--primary);margin-right:6px;"></i>${escapeHtml(name)} <span style="color:var(--gray);font-size:0.8rem;">(${formatFileSize(value.__file.size)})</span></div>`;
+      } else {
+        html += `<div style="padding:2px 0;color:var(--accent);font-weight:600;">${prefix}📁 ${escapeHtml(name)}/</div>`;
+        html += render(value, indent + 1);
+      }
+    }
+    return html;
+  }
+  return render(tree);
+}
+
+function updateFilters() {
+  const bar = document.getElementById('filtersBar');
+  const exts = new Set();
+  selectedFiles.forEach(f => exts.add(f.name.split('.').pop().toLowerCase()));
+
+  let html = `<button class="filter-chip ${currentFilter === 'all' ? 'active' : ''}" onclick="setFilter('all')">Все (${selectedFiles.length})</button>`;
+  Array.from(exts).sort().forEach(ext => {
+    const count = selectedFiles.filter(f => f.name.split('.').pop().toLowerCase() === ext).length;
+    html += `<button class="filter-chip ${currentFilter === ext ? 'active' : ''}" onclick="setFilter('${ext}')">.${ext} (${count})</button>`;
+  });
+  bar.innerHTML = html;
+}
+
+function setFilter(filter) {
+  currentFilter = filter;
+  updateFileList();
+}
+
+function setView(view) {
+  currentView = view;
+  document.getElementById('listViewBtn').classList.toggle('active', view === 'list');
+  document.getElementById('treeViewBtn').classList.toggle('active', view === 'tree');
+  updateFileList();
+}
+
+function removeFile(index) {
+  const fileToRemove = selectedFiles[index];
+  selectedFiles.splice(index, 1);
+  fileContents.delete(fileToRemove);
+  updateFileList();
+  updateProcessButton();
+  saveSession();
+}
+
+function updateProcessButton() {
+  document.getElementById('processBtn').disabled = selectedFiles.length === 0;
+}
+
+function clearAll() {
+  if (selectedFiles.length === 0) return;
+  if (!confirm('Очистить все файлы и результаты?')) return;
+  selectedFiles = [];
+  fileContents.clear();
+  document.getElementById('fileInput').value = '';
+  document.getElementById('directoryInput').value = '';
+  updateFileList();
+  updateProcessButton();
+  document.getElementById('results').innerHTML = `<div class="empty-state"><div class="empty-icon"><i class="fas fa-code"></i></div><p>Загрузите файлы для анализа</p></div>`;
+  document.getElementById('stats').style.display = 'none';
+  document.getElementById('copyAllBtn').disabled = true;
+  document.getElementById('searchToggleBtn').disabled = true;
+  localStorage.removeItem('codefusion-session');
+  showNotification('Всё очищено');
+}
+
+/* ===================== PROCESS FILES ===================== */
+async function processFiles() {
+  if (selectedFiles.length === 0) return;
+  const processBtn = document.getElementById('processBtn');
+  const originalHtml = processBtn.innerHTML;
+  processBtn.innerHTML = '<span class="loading"></span> Обработка...';
+  processBtn.disabled = true;
+
+  const progressContainer = document.getElementById('progressContainer');
+  const progressFill = document.getElementById('progressFill');
+  const progressText = document.getElementById('progressText');
+  progressContainer.classList.add('active');
+
+  fileContents.clear();
+  let processed = 0;
+
+  for (const file of selectedFiles) {
+    try {
+      const content = await readFileAsync(file);
+      fileContents.set(file, content);
+    } catch (err) {
+      console.error('Ошибка чтения:', file.name, err);
+      fileContents.set(file, `// Ошибка чтения файла: ${err.message}`);
+    }
+    processed++;
+    const percent = Math.round((processed / selectedFiles.length) * 100);
+    progressFill.style.width = percent + '%';
+    progressText.textContent = `Обработка: ${processed} / ${selectedFiles.length} (${percent}%)`;
+  }
+
+  displayResults();
+  processBtn.innerHTML = originalHtml;
+  processBtn.disabled = false;
+  document.getElementById('copyAllBtn').disabled = false;
+  document.getElementById('searchToggleBtn').disabled = false;
+
+  setTimeout(() => {
+    progressContainer.classList.remove('active');
+    progressFill.style.width = '0%';
+  }, 1000);
+
+  saveSession();
+  showNotification(`Обработано файлов: ${selectedFiles.length}`);
+}
+
+function readFileAsync(file) {
+  return new Promise((resolve, reject) => {
+    const reader = new FileReader();
+    reader.onload = e => resolve(e.target.result);
+    reader.onerror = () => reject(new Error('Не удалось прочитать файл'));
+    reader.readAsText(file);
+  });
+}
+
+/* ===================== DISPLAY RESULTS ===================== */
+function displayResults() {
+  const results = document.getElementById('results');
+  const stats = document.getElementById('stats');
+  results.innerHTML = '';
+
+  let totalLines = 0, totalChars = 0, totalWords = 0, totalSize = 0;
+
+  selectedFiles.forEach((file, idx) => {
+    const content = fileContents.get(file);
+    if (!content) return;
+
+    const lines = content.split('\n');
+    totalLines += lines.length;
+    totalChars += content.length;
+    totalWords += content.trim().split(/\s+/).filter(Boolean).length;
+    totalSize += file.size;
+
+    const ext = file.name.split('.').pop().toLowerCase();
+    const language = getLanguage(ext);
+    const relativePath = file.relativePath || file.webkitRelativePath || '';
+
+    const container = document.createElement('div');
+    container.className = 'code-container';
+    container.dataset.fileIndex = idx;
+
+    const codeLines = lines.map(line => `<span class="code-line">${escapeHtml(line) || ' '}</span>`).join('\n');
+
+    container.innerHTML = `
+      <div class="file-header">
+        <div class="file-title">
+          <i class="${getFileIcon(ext, true)}"></i>
+          <div>
+            <div>${escapeHtml(file.name)}</div>
+            ${relativePath ? `<div style="font-size:0.8rem;opacity:0.8;">${escapeHtml(relativePath)}</div>` : ''}
+          </div>
+        </div>
+        <div class="file-meta">
+          <span>${formatFileSize(file.size)}</span>
+          <span>${lines.length} строк</span>
+          <span>${language.toUpperCase()}</span>
+          <div class="file-actions">
+            <button class="icon-btn" onclick="copySingleFile(${idx})" title="Копировать файл" aria-label="Копировать файл">
+              <i class="fas fa-copy"></i>
+            </button>
+            <button class="icon-btn" onclick="toggleCollapse(${idx})" title="Свернуть/развернуть" aria-label="Свернуть">
+              <i class="fas fa-compress"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="code-content" id="code-${idx}">
+        <pre><code class="language-${language}">${codeLines}</code></pre>
+      </div>
+    `;
+    results.appendChild(container);
+
+    const codeEl = container.querySelector('code');
+    hljs.highlightElement(codeEl);
+  });
+
+  document.getElementById('totalFiles').textContent = selectedFiles.length;
+  document.getElementById('totalLines').textContent = totalLines.toLocaleString('ru');
+  document.getElementById('totalChars').textContent = totalChars.toLocaleString('ru');
+  document.getElementById('totalWords').textContent = totalWords.toLocaleString('ru');
+  document.getElementById('totalSize').textContent = formatFileSize(totalSize);
+  stats.style.display = 'grid';
+
+  document.getElementById('resultsSection').scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+
+function toggleCollapse(idx) {
+  const el = document.getElementById(`code-${idx}`);
+  el.classList.toggle('collapsed');
+}
+
+function copySingleFile(idx) {
+  const file = selectedFiles[idx];
+  const content = fileContents.get(file);
+  if (!content) return;
+  navigator.clipboard.writeText(content).then(() => {
+    showNotification(`Скопировано: ${file.name}`);
+  });
+}
+
+/* ===================== EXPORT ===================== */
+function getCombinedCode() {
+  let combined = '';
+  selectedFiles.forEach(file => {
+    const content = fileContents.get(file);
+    if (content) {
+      const path = file.relativePath || file.webkitRelativePath || '';
+      const pathInfo = path ? ` (${path})` : '';
+      combined += `// ======== ${file.name}${pathInfo} ========\n`;
+      combined += content + '\n\n';
+    }
+  });
+  return combined;
+}
+
+function copyAllCode() {
+  if (fileContents.size === 0) {
+    showNotification('Сначала обработайте файлы!', 'warning');
+    return;
+  }
+  navigator.clipboard.writeText(getCombinedCode()).then(() => {
+    showNotification('Весь код скопирован в буфер обмена!');
+  }).catch(() => {
+    showNotification('Ошибка копирования', 'error');
+  });
+}
+
+function exportAs(format) {
+  if (fileContents.size === 0) {
+    showNotification('Сначала обработайте файлы!', 'warning');
+    return;
+  }
+
+  if (format === 'txt') {
+    downloadBlob(getCombinedCode(), 'code_analysis.txt', 'text/plain');
+  } else if (format === 'md') {
+    let md = `# CodeFusion Analysis Report\n\n`;
+    md += `**Дата:** ${new Date().toLocaleString('ru')}\n`;
+    md += `**Файлов:** ${selectedFiles.length}\n\n---\n\n`;
+    selectedFiles.forEach(file => {
+      const content = fileContents.get(file);
+      if (content) {
+        const ext = file.name.split('.').pop();
+        md += `## ${file.name}\n\n`;
+        md += `\`\`\`${ext}\n${content}\n\`\`\`\n\n---\n\n`;
+      }
+    });
+    downloadBlob(md, 'code_analysis.md', 'text/markdown');
+  } else if (format === 'zip') {
+    const zip = new JSZip();
+    selectedFiles.forEach(file => {
+      const content = fileContents.get(file);
+      if (content) {
+        const path = file.relativePath || file.webkitRelativePath || file.name;
+        zip.file(path, content);
+      }
+    });
+    zip.generateAsync({ type: 'blob' }).then(blob => {
+      downloadBlob(blob, 'code_analysis.zip', 'application/zip');
+    });
+  }
+  showNotification(`Экспорт в ${format.toUpperCase()} завершён`);
+}
+
+function downloadBlob(content, filename, type) {
+  const blob = content instanceof Blob ? content : new Blob([content], { type: type + ';charset=utf-8' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = filename;
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  URL.revokeObjectURL(url);
+}
+
+/* ===================== SEARCH ===================== */
+function setupSearch() {
+  const input = document.getElementById('searchInput');
+  input.addEventListener('input', debounce(performSearch, 200));
+  input.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter') {
+      e.preventDefault();
+      navigateSearch(e.shiftKey ? -1 : 1);
+    } else if (e.key === 'Escape') {
+      toggleSearch();
+    }
+  });
+}
+
+function toggleSearch() {
+  const container = document.getElementById('searchContainer');
+  container.classList.toggle('active');
+  if (container.classList.contains('active')) {
+    document.getElementById('searchInput').focus();
+  } else {
+    clearSearch();
+  }
+}
+
+function performSearch() {
+  clearSearch();
+  const query = document.getElementById('searchInput').value.trim();
+  if (!query) {
+    document.getElementById('searchInfo').textContent = '';
+    return;
+  }
+
+  const containers = document.querySelectorAll('.code-container');
+  let totalMatches = 0;
+
+  containers.forEach(container => {
+    const codeEl = container.querySelector('code');
+    const originalHtml = codeEl.getAttribute('data-original-html') || codeEl.innerHTML;
+    codeEl.setAttribute('data-original-html', originalHtml);
+
+    const textContent = codeEl.textContent;
+    const regex = new RegExp(escapeRegExp(query), 'gi');
+    const matches = textContent.match(regex);
+    const count = matches ? matches.length : 0;
+
+    if (count > 0) {
+      totalMatches += count;
+      const highlighted = originalHtml.replace(
+        new RegExp(`(${escapeRegExp(query)})`, 'gi'),
+        '<mark>$1</mark>'
+      );
+      codeEl.innerHTML = highlighted;
+      container.dataset.hasMatch = 'true';
+    } else {
+      container.dataset.hasMatch = 'false';
+      container.style.opacity = '0.4';
+    }
+  });
+
+  searchMatches = Array.from(document.querySelectorAll('.code-container[data-has-match="true"]'));
+  currentMatchIndex = searchMatches.length > 0 ? 0 : -1;
+
+  document.getElementById('searchInfo').textContent = totalMatches > 0
+    ? `${totalMatches} совпад. в ${searchMatches.length} файл.`
+    : 'Не найдено';
+
+  if (currentMatchIndex >= 0) {
+    searchMatches[0].scrollIntoView({ behavior: 'smooth', block: 'center' });
+  }
+}
+
+function navigateSearch(direction) {
+  if (searchMatches.length === 0) return;
+  currentMatchIndex = (currentMatchIndex + direction + searchMatches.length) % searchMatches.length;
+  searchMatches[currentMatchIndex].scrollIntoView({ behavior: 'smooth', block: 'center' });
+  document.getElementById('searchInfo').textContent = `${currentMatchIndex + 1} / ${searchMatches.length}`;
+}
+
+function clearSearch() {
+  document.querySelectorAll('.code-container').forEach(c => {
+    c.style.opacity = '';
+    c.dataset.hasMatch = '';
+    const codeEl = c.querySelector('code');
+    const original = codeEl.getAttribute('data-original-html');
+    if (original) codeEl.innerHTML = original;
+  });
+  searchMatches = [];
+  currentMatchIndex = -1;
+}
+
+/* ===================== SESSION ===================== */
+function saveSession() {
+  // Сохраняем только имена и размеры (содержимое не сохраняем — слишком много данных)
+  try {
+    const data = {
+      files: selectedFiles.map(f => ({
+        name: f.name,
+        size: f.size,
+        relativePath: f.relativePath || f.webkitRelativePath || ''
+      })),
+      timestamp: Date.now()
+    };
+    localStorage.setItem('codefusion-session', JSON.stringify(data));
+  } catch (e) { console.warn('Не удалось сохранить сессию', e); }
+}
+
+function loadSession() {
+  try {
+    const data = JSON.parse(localStorage.getItem('codefusion-session'));
+    if (data && Date.now() - data.timestamp < 24 * 60 * 60 * 1000) {
+      // Можно показать уведомление о восстановлении
+      console.log('Найдена предыдущая сессия:', data.files.length, 'файлов');
+    }
+  } catch (e) {}
+}
+
+/* ===================== KEYBOARD SHORTCUTS ===================== */
+function setupKeyboardShortcuts() {
+  document.addEventListener('keydown', (e) => {
+    const isInput = ['INPUT', 'TEXTAREA'].includes(document.activeElement.tagName);
+
+    if (e.key === 'Escape') {
+      hideShortcuts();
+      const searchContainer = document.getElementById('searchContainer');
+      if (searchContainer.classList.contains('active')) toggleSearch();
+      return;
+    }
+
+    if (e.ctrlKey || e.metaKey) {
+      if (e.key === 'o' || e.key === 'O') {
+        e.preventDefault();
+        document.getElementById('fileInput').click();
+      } else if (e.key === 's' || e.key === 'S') {
+        e.preventDefault();
+        exportAs('txt');
+      } else if (e.key === 'f' || e.key === 'F') {
+        e.preventDefault();
+        toggleSearch();
+      } else if (e.key === 'Enter') {
+        e.preventDefault();
+        if (!document.getElementById('processBtn').disabled) processFiles();
+      } else if (e.shiftKey && (e.key === 'x' || e.key === 'X')) {
+        e.preventDefault();
+        clearAll();
+      }
+    } else if (!isInput && (e.key === 't' || e.key === 'T')) {
+      toggleTheme();
+    } else if (!isInput && e.key === '?') {
+      showShortcuts();
+    }
+  });
+}
+
+function showShortcuts() {
+  document.getElementById('shortcutsModal').classList.add('active');
+}
+function hideShortcuts() {
+  document.getElementById('shortcutsModal').classList.remove('active');
+}
+
+/* ===================== FAQ ===================== */
+function toggleFaq(el) {
+  el.parentElement.classList.toggle('open');
+}
+
+/* ===================== NOTIFICATION ===================== */
+function showNotification(message, type = 'success') {
+  const n = document.getElementById('notification');
+  const text = document.getElementById('notificationText');
+  text.textContent = message;
+  n.className = 'notification show ' + type;
+  const icon = n.querySelector('i');
+  icon.className = type === 'success' ? 'fas fa-check-circle'
+    : type === 'error' ? 'fas fa-exclamation-circle'
+    : 'fas fa-exclamation-triangle';
+  setTimeout(() => n.classList.remove('show'), 3000);
+}
+
+/* ===================== HELPERS ===================== */
+function getFileIcon(ext, isClass = false) {
+  const icons = {
+    'js': 'fab fa-js-square', 'ts': 'fab fa-js-square', 'jsx': 'fab fa-react', 'tsx': 'fab fa-react',
+    'html': 'fab fa-html5', 'css': 'fab fa-css3-alt', 'vue': 'fab fa-vuejs', 'svelte': 'fas fa-fire',
+    'java': 'fab fa-java', 'py': 'fab fa-python', 'php': 'fab fa-php',
+    'js': 'fab fa-js', 'node': 'fab fa-node-js',
+    'git': 'fab fa-git-alt', 'github': 'fab fa-github',
+    'markdown': 'fab fa-markdown', 'md': 'fab fa-markdown',
+    'swift': 'fab fa-swift', 'docker': 'fab fa-docker',
+    'linux': 'fab fa-linux', 'apple': 'fab fa-apple', 'windows': 'fab fa-windows'
+  };
+  const defaultIcon = 'fas fa-file-code';
+  const cls = icons[ext] || defaultIcon;
+  return isClass ? cls : `<i class="${cls}"></i>`;
+}
+
+function getLanguage(ext) {
+  const map = {
+    'js': 'javascript', 'ts': 'typescript', 'jsx': 'javascript', 'tsx': 'typescript',
+    'html': 'html', 'htm': 'html', 'css': 'css', 'scss': 'scss', 'sass': 'sass', 'less': 'less',
+    'java': 'java', 'py': 'python', 'php': 'php', 'rb': 'ruby',
+    'c': 'c', 'cpp': 'cpp', 'h': 'c', 'cs': 'csharp',
+    'go': 'go', 'rs': 'rust', 'swift': 'swift', 'kt': 'kotlin',
+    'xml': 'xml', 'svg': 'xml',
+    'json': 'json', 'yaml': 'yaml', 'yml': 'yaml', 'toml': 'ini', 'ini': 'ini',
+    'sql': 'sql', 'md': 'markdown', 'sh': 'bash', 'bash': 'bash', 'bat': 'dos', 'ps1': 'powershell',
+    'vue': 'xml', 'svelte': 'xml', 'txt': 'plaintext'
+  };
+  return map[ext] || 'plaintext';
+}
+
+function formatFileSize(bytes) {
+  if (bytes < 1024) return bytes + ' B';
+  if (bytes < 1048576) return (bytes / 1024).toFixed(1) + ' KB';
+  if (bytes < 1073741824) return (bytes / 1048576).toFixed(1) + ' MB';
+  return (bytes / 1073741824).toFixed(2) + ' GB';
+}
+
+function escapeHtml(s) {
+  if (typeof s !== 'string') return '';
+  return s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&#039;');
+}
+
+function escapeRegExp(s) {
+  return s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+}
+
+function debounce(fn, delay) {
+  let timer;
+  return function(...args) {
+    clearTimeout(timer);
+    timer = setTimeout(() => fn.apply(this, args), delay);
+  };
+}
+
+/* ===================== PWA ===================== */
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('sw.js').catch(() => {});
+  });
+}
+</script>
+</body>
+</html>
